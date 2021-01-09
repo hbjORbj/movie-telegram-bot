@@ -6,6 +6,10 @@ const { getCaption, reformatTitle } = require("./utils");
 
 const bot = new Telegraf(process.env.TELEGRAM_TOKEN);
 
+bot.start((ctx) =>
+  ctx.reply("Welcome To Movie Bot!" + "\n\nCommand /help for guide 😁")
+);
+
 bot.help((ctx) =>
   ctx.reply("Enter the title of a movie you would like to know about 😃")
 );
